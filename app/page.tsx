@@ -631,87 +631,115 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                title: "E-commerce Platform",
+                title: "FitFuel",
                 description:
-                  "A full-stack e-commerce platform built with React and Node.js featuring user authentication, product catalog, shopping cart, and secure payment integration.",
-                image: "/placeholder.svg?height=250&width=400",
-                technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+                  "Developed a responsive wellness platform with an intuitive UI and visual progress indicators for tracking daily calorie intake. It features a personalized food recommendation system adapting to user goals and dietary patterns. The platform also integrates interactive fitness carousels for exercise guidance, promoting a balanced lifestyle.",
+                image: "fitfuel.png/?height=250&width=400",
+                technologies: ["React.js", "Next.js", "Tailwind CS"],
                 gradient: "from-blue-500 to-cyan-500",
+                liveUrl: "https://fit-fuel-mocha.vercel.app/", // Placeholder URL
+                githubUrl: "https://github.com/Archita2552/FitFuel", // Placeholder URL
               },
               {
-                title: "Task Management App",
+                title: "Country Explorer – Global Info Website",
                 description:
-                  "A collaborative task management application with real-time updates, drag-and-drop functionality, team collaboration features, and progress tracking.",
-                image: "/placeholder.svg?height=250&width=400",
-                technologies: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
+                  "Developed a responsive single-page application to explore global country data, featuring dynamic routing, region-based filtering, a dark/light mode toggle, and a modern UI, displaying structured information from a static JSON source without backend dependencies.",
+                image: "/country-app.png?height=250&width=400",
+                technologies: ["AngularJS", "HTML", "CSS"],
                 gradient: "from-green-500 to-emerald-500",
+                liveUrl: "https://country-app-ten-virid.vercel.app/", // Placeholder URL
+                githubUrl: "https://github.com/Archita2552/CountryApp", // 
               },
               {
-                title: "Weather Dashboard",
+                title: "Crowd Counting and Video Surveillance",
                 description:
-                  "A responsive weather dashboard that displays current weather conditions, 7-day forecasts, interactive maps, and weather alerts using multiple APIs.",
+                  "Designed and implemented a hybrid deep learning model combining YOLOv5 for person detection and CSRNet for density estimation, enabling accurate real-time crowd counting with an 85% improvement in overall count accuracy through an adaptive fusion mechanism.",
                 image: "/placeholder.svg?height=250&width=400",
-                technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3"],
+                technologies: ["Python", "YOLOv5", "CSRNet", "OpenCV", "Deep Learning"],
                 gradient: "from-purple-500 to-violet-500",
+                liveUrl: "", // Placeholder URL
+                githubUrl: "https://github.com/Archita2552/Crowd-Counting-Video-Surveillance-", // 
               },
             ].map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.2}>
-                <Card
-                  className={`group bg-white dark:bg-slate-800 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 animate-fade-in-up overflow-hidden hover:rotate-1`}
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                  aria-label={`View ${project.title} project`}
                 >
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={400}
-                      height={250}
-                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
-                    />
-                  </div>
-
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between text-lg sm:text-xl">
-                      <span className="text-slate-800 dark:text-white">{project.title}</span>
-                      <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="hover:bg-indigo-100 dark:hover:bg-indigo-900/20 hover:scale-110 transition-all duration-300"
-                        >
-                          <Github className="w-3 sm:w-4 h-3 sm:h-4" />
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="hover:bg-purple-100 dark:hover:bg-purple-900/20 hover:scale-110 transition-all duration-300"
-                        >
-                          <ExternalLink className="w-3 sm:w-4 h-3 sm:h-4" />
-                        </Button>
-                      </div>
-                    </CardTitle>
-                  </CardHeader>
-
-                  <CardContent>
-                    <CardDescription className="mb-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
-                      {project.description}
-                    </CardDescription>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 hover:from-indigo-100 hover:to-purple-100 dark:hover:from-indigo-900/50 dark:hover:to-purple-900/50 transition-all duration-300 text-xs hover:scale-105 animate-bounce-in"
-                          style={{ animationDelay: `${techIndex * 0.05}s` }}
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
+                  <Card
+                    className={`bg-white dark:bg-slate-800 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 animate-fade-in-up overflow-hidden hover:rotate-1`}
+                  >
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        width={400}
+                        height={250}
+                        className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
+                      />
                     </div>
-                  </CardContent>
-                </Card>
+
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between text-lg sm:text-xl">
+                        <span className="text-slate-800 dark:text-white">{project.title}</span>
+                        <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.githubUrl && (
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="hover:bg-indigo-100 dark:hover:bg-indigo-900/20 hover:scale-110 transition-all duration-300"
+                              onClick={(e) => {
+                                e.preventDefault() // Prevent card click from triggering
+                                window.open(project.githubUrl, "_blank")
+                              }}
+                              aria-label={`View ${project.title} on GitHub`}
+                            >
+                              <Github className="w-3 sm:w-4 h-3 sm:h-4" />
+                            </Button>
+                          )}
+                          {project.liveUrl && (
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="hover:bg-purple-100 dark:hover:bg-purple-900/20 hover:scale-110 transition-all duration-300"
+                              onClick={(e) => {
+                                e.preventDefault() // Prevent card click from triggering
+                                window.open(project.liveUrl, "_blank")
+                              }}
+                              aria-label={`View live demo of ${project.title}`}
+                            >
+                              <ExternalLink className="w-3 sm:w-4 h-3 sm:h-4" />
+                            </Button>
+                          )}
+                        </div>
+                      </CardTitle>
+                    </CardHeader>
+
+                    <CardContent>
+                      <CardDescription className="mb-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                        {project.description}
+                      </CardDescription>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge
+                            key={tech}
+                            variant="secondary"
+                            className="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 hover:from-indigo-100 hover:to-purple-100 dark:hover:from-indigo-900/50 dark:hover:to-purple-900/50 transition-all duration-300 text-xs hover:scale-105 animate-bounce-in"
+                            style={{ animationDelay: `${techIndex * 0.05}s` }}
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
               </ScrollReveal>
             ))}
           </div>
