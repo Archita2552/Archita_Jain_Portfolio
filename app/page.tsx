@@ -541,6 +541,20 @@ export default function Portfolio() {
                     url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_YAHM3v6X3ahzQYEpB_1753085530299_completion_certificate.pdf", 
                   },
                   {
+                    title: "Deloitte Australia - Technology Job Simulation",
+                    issuer: "Forage",
+                    date: "2025",
+                    color: "from-yellow-400 to-maroon-500",
+                    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_YAHM3v6X3ahzQYEpB_1756391943890_completion_certificate.pdf", 
+                  },
+                  {
+                    title: "Deloitte Australia - Data Analytics Job Simulation",
+                    issuer: "Forage",
+                    date: "2025",
+                    color: "from-orange-400 to-maroon-500",
+                    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_YAHM3v6X3ahzQYEpB_1756388943197_completion_certificate.pdf", 
+                  },
+                  {
                     title: "Full-Stack Web Development Bootcamp",
                     issuer: "Udemy",
                     date: "2024",
